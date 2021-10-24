@@ -1,0 +1,1 @@
+Arquivo teste para upload de arquivos txt com capybara
