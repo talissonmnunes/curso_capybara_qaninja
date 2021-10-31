@@ -1,7 +1,7 @@
 
 describe 'Ids dinâmicos', :dynamics do
     before(:each) do
-        visit 'https://training-wheels-protocol.herokuapp.com/access'
+        visit '/access'
     end
 
     it 'cadastro' do
