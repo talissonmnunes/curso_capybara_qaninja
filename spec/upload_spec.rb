@@ -4,7 +4,7 @@ describe 'Upload de arquivos', :upload do
         @arquivo = Dir.pwd + '/spec/upload_archives/arquivo.txt'
         @imagem = Dir.pwd + '/spec/upload_archives/ArcheAge_sample.jpg'
 
-        visit 'https://training-wheels-protocol.herokuapp.com/upload'
+        visit '/upload'
     end
 
     it 'upload com arquivo texto' do

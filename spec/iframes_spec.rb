@@ -3,7 +3,7 @@
 describe 'Iframes', :iframes do
     describe 'nice', :nice_iframe do
         before(:each) do
-            visit 'https://training-wheels-protocol.herokuapp.com/nice_iframe'
+            visit '/nice_iframe'
         end
 
         it 'adicionar ao carrinho' do
@@ -18,7 +18,7 @@ describe 'Iframes', :iframes do
 
     describe 'bad', :bad_iframe do
         before(:each) do
-            visit 'https://training-wheels-protocol.herokuapp.com/bad_iframe'
+            visit '/bad_iframe'
         end
 
         it 'carrinho deve estar vazio' do
