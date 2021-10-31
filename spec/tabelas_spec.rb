@@ -38,6 +38,7 @@ describe 'tabelas', :tables do
 
         msg = page.driver.browser.switch_to.alert.text
         expect(msg).to eql 'Chris Pratt foi selecionado para remoção!'
+        page.driver.browser.switch_to.alert.accept
     end
 
     it 'deve exibir o chris prat para edição' do
@@ -46,5 +47,6 @@ describe 'tabelas', :tables do
 
         msg = page.driver.browser.switch_to.alert.text
         expect(msg).to eql 'Chris Pratt foi selecionado para edição!'
+        page.driver.browser.switch_to.alert.accept
     end
 end
