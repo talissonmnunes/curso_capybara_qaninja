@@ -12,8 +12,16 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
-
   config.include Capybara::DSL
+
+  config.before(:example) do
+    page.current_window.resize_to(1280, 800)
+  end
+
+  config.after(:example) do |e|
+    nome = e.description.gsub(/[^A-Za-z0-9]/, '').tr(' ', '_')
+    page.save_screenshot('tests/' + nome + '.png') if e.exception
+  end
 end
 
 Capybara.configure do |config|
